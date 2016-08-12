@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LFCCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="260"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xMy-ok-KTj">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="211"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="经济又实惠啦，快来买呀！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Yj-9M-shb">
+                    <rect key="frame" x="0.0" y="211" width="240" height="49"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="5Yj-9M-shb" secondAttribute="trailing" id="7gL-SE-OOT"/>
+                <constraint firstItem="5Yj-9M-shb" firstAttribute="top" secondItem="xMy-ok-KTj" secondAttribute="bottom" id="CyW-n6-tdb"/>
+                <constraint firstItem="xMy-ok-KTj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="LyF-oC-EEt"/>
+                <constraint firstAttribute="trailing" secondItem="xMy-ok-KTj" secondAttribute="trailing" id="dwV-uj-idW"/>
+                <constraint firstItem="5Yj-9M-shb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="h1J-1u-77N"/>
+                <constraint firstItem="xMy-ok-KTj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hOZ-67-aU0"/>
+                <constraint firstAttribute="bottom" secondItem="5Yj-9M-shb" secondAttribute="bottom" id="pGE-9c-osj"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="contentLabel" destination="5Yj-9M-shb" id="Myf-mk-5kW"/>
+                <outlet property="imageView" destination="xMy-ok-KTj" id="Il8-8J-ven"/>
+            </connections>
+        </view>
+    </objects>
+</document>
