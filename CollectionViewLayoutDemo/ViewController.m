@@ -37,6 +37,7 @@
     self.layout.colNum = 2;
     self.layout.sectionInsets = UIEdgeInsetsMake(8,8,8,8);
     self.layout.delegate = self;
+    [self.layout autoContentSize];
     
     UICollectionView* collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) collectionViewLayout:self.layout];
     collectionView.delegate = self;
@@ -73,7 +74,7 @@
     CGFloat width = (self.view.bounds.size.width - self.layout.sectionInsets.left * 2 - (self.layout.colNum - 1) * self.layout.rowPadding) / self.layout.colNum;
     CGFloat rate = [[self.listItems[indexPath.row] objectForKey:@"width"] floatValue]/ width;
     CGFloat height = [[self.listItems[indexPath.row] objectForKey:@"height"] floatValue]/ rate;
-    return  height + 100.f;
+    return  height + 60.f;
 }
 
 @end

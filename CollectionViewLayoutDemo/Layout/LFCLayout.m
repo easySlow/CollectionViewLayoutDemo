@@ -18,7 +18,6 @@ static UIEdgeInsets edge ;
 @property (nonatomic,strong) NSMutableArray* attributes;
 @property (nonatomic,strong) NSMutableArray* heightOfColArray;
 @property (nonatomic, assign) BOOL isAutoContentSize;
-
 @end
 
 @implementation LFCLayout
@@ -96,6 +95,7 @@ static UIEdgeInsets edge ;
     
     self.heightOfColArray[currentLow] = @(CGRectGetMaxY(attribute.frame));
     //找出最高的一列的高度，设定contentSize;
+    if(self.isAutoContentSize){
     CGFloat maxY = self.heightOfColArray.count ? [[self.heightOfColArray firstObject] floatValue] : edge.top;
     for (NSInteger i = 1; i < self.heightOfColArray.count; i++) {
         if (maxY < [self.heightOfColArray[i] floatValue]) {
@@ -104,12 +104,16 @@ static UIEdgeInsets edge ;
     }
     
     self.contentSize = CGSizeMake(self.collectionView.bounds.size.width, maxY + edge.bottom);
-    
+    }
     return attribute;
 }
 
 -(CGSize)collectionViewContentSize{
     return  self.contentSize;
+}
+
+-(void)autoContentSize{
+    self.isAutoContentSize = YES;
 }
 
 @end

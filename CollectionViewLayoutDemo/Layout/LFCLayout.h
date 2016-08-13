@@ -27,6 +27,7 @@
 
 @property (nonatomic,weak) id<LFCCellHeightDelegate> delegate;
 
+-(void)autoContentSize;
 @end
 
 
